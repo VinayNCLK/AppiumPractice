@@ -93,6 +93,7 @@ public class AppiumPractice6 {
 		Thread.sleep(4000);
 		scrolling_withcoordinates(mobiledriver, 1950, 669, 541);
 
+		
 	}
 
 }
