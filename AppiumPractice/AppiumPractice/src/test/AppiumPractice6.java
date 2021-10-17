@@ -30,6 +30,15 @@ public class AppiumPractice6 {
 	}
 	
 	
+	public static void scrolling(AndroidDriver driver,  int starty, int endy) {
+		Dimension dis = driver.manage().window().getSize();
+		int xaxis = dis.width / 2;
+		TouchAction act = new TouchAction(driver);
+		act.press(xaxis, starty).waitAction(Duration.ofMillis(5000)).moveTo(xaxis, endy).release().perform();
+		
+	}
+	
+	
 	//Scrolling at the particular y axis
 	public static void swipping_withcoordinates(AndroidDriver driver, int startx, int endx, int yaxis) {
 		TouchAction act = new TouchAction(driver);
